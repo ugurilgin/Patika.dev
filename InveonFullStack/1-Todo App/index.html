@@ -7,6 +7,7 @@
     <title>To Do App</title>
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.0/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.js"></script>
     <script>
@@ -40,9 +41,34 @@
         <div class="grid-container">
 
         <div class="grid-element">
-        <button class="accordion">Section 1 <span>+</span></button>
+        <button class="accordion">Markete Gidilecek <span><i class="fa fa-angle-down" aria-hidden="true"></i></span></button>
     <div class="panel">
-  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        
+<div class="row">
+    <div class="left-column">
+        <p>Markete Gidilip alışveriş yapılacak.</p>
+
+    </div>
+    <div class="right-column">
+        <div class="panelbuttons" >
+            <a  class="button-check"> <i class="fa fa-check-square-o" aria-hidden="true"></i>
+            </a>
+            <a  class="button-edit"> <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+            </a>
+            <a  class="button-delete"> <i class="fa fa-trash-o" aria-hidden="true"></i>
+            </a>
+          </div>
+    </div>
+</div>
+<div class="row">
+    <div class="left-column-time">
+        <p>Creation Time</p>
+        </div>
+        <div class="right-column-time">
+            <p>Finish Time</p>
+        </div>
+</div>
+
     </div>
 </div>
 
@@ -68,8 +94,11 @@
                 <input type="datetime" name="finishDate" id="finishDate" placeholder="DD/MM/YYYY">
             </div>
                 <div class="formElement"> 
-                    <a  class="saveButton"> Save </a>
-                    <a  class="cancelButton"> Cancel </a>
+                    <a  class="saveButton"> Save
+                    </a>
+                    <a  class="cancelButton"> Cancel
+                    </a>
+                   
             </div>
             </form>
         </div>

@@ -1,13 +1,15 @@
 body{
 margin: 0px;
 padding: 0px;
+background: rgb(32,32,156);
+background: linear-gradient(90deg, rgba(32,32,156,1) 0%, rgba(0,212,255,1) 100%);
 }
 #container{
     display: flex;
     align-items: center;
     justify-content: center;
-    
-    
+    width: 50%;
+    margin: auto;
 }
 .addButton{
     width: 35px;
@@ -25,7 +27,7 @@ padding: 0px;
     text-decoration: none;
     cursor: pointer;
     }
-h1{color: red;}
+h1{color: white;}
 /* <Pop Up Form > */
 .bg-modal{
     background-color: rgba(0, 0, 0, 0.8);
@@ -108,7 +110,7 @@ h1{color: red;}
     width: 100%;
     display: grid;
     grid-template-columns: auto  ;
-    background-color: rgb(78, 78, 168);
+    background-color: white;
     padding: 4px;
   }
 .grid-element {
@@ -149,6 +151,78 @@ h1{color: red;}
   display: none;
   background-color: white;
   overflow: hidden;
+  text-align: left;
 }
+.button-check{
+    background-color: blue;
+	border: 2px solid white;
+	border-radius: 30px;
+	text-decoration: none;
+	padding: 5px 6px;
+	color: white;
+	margin-top: 10px;
+	display: inline-block;
+    margin-left: 0px;
+}
+.button-check:hover{
+    background-color: white;
+		color: blue;
+		border: 2px solid blue;
+        cursor: pointer;
+}
+.button-edit{
+    background-color: orange;
+	border: 2px solid white;
+	border-radius: 30px;
+	text-decoration: none;
+	padding: 5px 6px;
+	color: white;
+	margin-top: 10px;
+	display: inline-block;
+    margin-left: 0px;
+}
+.button-edit:hover{
+    background-color: white;
+		color: orange;
+		border: 2px solid orange;
+        cursor: pointer;
+}
+.button-delete{
+    background-color: red;
+	border: 2px solid white;
+	border-radius: 30px;
+	text-decoration: none;
+	padding: 5px 6px;
+	color: white;
+	margin-top: 10px;
+	display: inline-block;
+    margin-left: 0px;
+}
+.button-delete:hover{
+    background-color: white;
+		color: red;
+		border: 2px solid red;
+        cursor: pointer;
+}
+.left-column {
+    width: 80%; 
+    float:left;
+  }
+  .right-column {
+    width: 20%; 
+    float:right;
+  }
+  .left-column-time {
+    width: 50%; 
+    float:left;
+  }
+  .right-column-time {
+    width: 50%; 
+    float:right;
+  }
+  .panelbuttons{
+      float: right;
+  }
 
+ 
    /* </Accordion Elements> */
