@@ -6,13 +6,64 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>To Do App</title>
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.0/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.js"></script>
+    <script>
+        $( function() {
+        
+        $( "#createDate" ).datepicker({
+        
+        dateFormat: "dd-mm-yy",
+        altFormat: "yy-mm-dd",
+        firstDay:1
+       });
+        
+        } );
+        $( function() {
+        
+        $( "#finishDate" ).datepicker({
+        
+        dateFormat: "dd-mm-yy",
+        altFormat: "yy-mm-dd",
+        firstDay:1
+       });
+        
+        } );
+        </script>
 </head>
 <body>
     <div id="container">
         <h1> To Do List </h1>
     </div>
+    <div class="bg-modal">
+        <div class="modal-content">
+            <div class="close">+</div>
+            <h4>Add New Task</h4>
+
+            <form action="">
+                <div class="formElement"> 
+                <input type="text" name="title" id="title" placeholder="Title">
+                </div>
+                <div class="formElement"> 
+                <input type="text" name="desc" id="desc" placeholder="Description">
+            </div>
+                <div class="formElement"> 
+                <input type="datetime" name="createDate" id="createDate" placeholder="DD/MM/YYYY">
+            </div>
+                <div class="formElement"> 
+                <input type="datetime" name="finishDate" id="finishDate" placeholder="DD/MM/YYYY">
+            </div>
+                <div class="formElement"> 
+                    <a  class="saveButton"> Save </a>
+                    <a  class="cancelButton"> Cancel </a>
+            </div>
+            </form>
+        </div>
+    </div>  
     
 </body>
-<footer><a href="#" class="addButton"> + </a>
+<footer><a  class="addButton"> + </a>
+    <script src="js/style.js"></script>
 </footer>
 </html>
