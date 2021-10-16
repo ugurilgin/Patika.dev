@@ -1,0 +1,12 @@
+body{
+margin: 0px;
+padding: 0px;
+}
+#container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: aqua;
+    
+}
+h1{color: red;}
