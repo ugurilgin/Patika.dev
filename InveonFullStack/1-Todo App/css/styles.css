@@ -9,4 +9,19 @@ padding: 0px;
     background-color: aqua;
     
 }
+.addButton{
+    width: 35px;
+    height: 35px;
+    position:fixed;
+    bottom:15px;
+    right:15px;
+    border-radius: 100%;
+    padding:10px;
+    background-color:green;
+    color:#fff;
+    text-align:center;
+    z-index:2;
+    font-size: 30px;
+    text-decoration: none;
+    }
 h1{color: red;}
