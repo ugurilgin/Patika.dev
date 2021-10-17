@@ -120,7 +120,12 @@ h1{color: white;}
     text-align: center;
    
   }
-  
+  .grid-element.checked {
+    text-decoration: line-through;
+    opacity: 0.2;
+
+   
+  }
 .accordion {
   position: relative;
   background-color: #eee;
