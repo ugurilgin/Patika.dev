@@ -4,10 +4,13 @@ const category = document.querySelector("#category");
 const createDate = document.querySelector("#createDate");
 const finishDate = document.querySelector("#finishDate");
 const gridContainer = document.querySelector(".grid-container");
+let updateIndex;
 
 //Add Button Functions
 document.querySelector('.addButton').addEventListener('click',function(){
-    
+  
+  document.querySelector('#saveButton').style.display='inline-block';
+  document.querySelector('#updateButton').style.display='none';
     try {
     const e=document.querySelector('.remove-this');
     e.parentElement.removeChild(e);
@@ -53,7 +56,7 @@ function getToday()
 }
 
 //Save Button Functions
-document.querySelector('.saveButton').addEventListener('click',function(){
+document.querySelector('#saveButton').addEventListener('click',function(){
  
   let keyNumber=Math.floor(Math.random() * 1000000000000001);
     const element = document.createElement('div');
@@ -63,7 +66,7 @@ document.querySelector('.saveButton').addEventListener('click',function(){
     '<a  class="bell"> <i class="fa fa-bell-o" aria-hidden="true"></i>'+
     '</a> '+ 
 '</div>'+
-'<p>'+title.value+'<span hidden class="item-id" >'+keyNumber.toString()+'</span>'+'</p>' +
+'<p class="titleP">'+title.value+'<span hidden class="item-id" >'+keyNumber.toString()+'</span>'+'</p>' +
 '<p > <p class="left-column">Creation Time: '+createDate.value+'</p><p class="middle-column">Finish Time: '+finishDate.value+'</p><p class="right-column">Category: '+category.value+'</p> </p>'+
 
     '<div class="panelbuttons" >'+
@@ -134,7 +137,7 @@ function getItems()
   '<a  class="bell"> <i class="fa fa-bell-o" aria-hidden="true"></i>'+
   '</a> '+ 
 '</div>'+
-'<p>'+a.title+'<span hidden class="item-id" >'+i.toString()+'</span>'+'</p>' +
+'<p class="titleP">'+a.title+'<span hidden class="item-id" >'+i.toString()+'</span>'+'</p>' +
 '<p > <p class="left-column">Creation Time: '+a.createDate+'</p><p class="middle-column">Finish Time: '+a.finishDate+'</p><p class="right-column">Category: '+a.category+'</p> </p>'+
 
   '<div class="panelbuttons" >'+
@@ -184,19 +187,59 @@ checks[i].addEventListener('click',function(){
 }
 //Edit Button Functions
 let edits = document.getElementsByClassName('button-edit');
-for(let i=0;i<checks.length;i++) {
+for(let i=0;i<edits.length;i++) {
   edits[i].addEventListener('click',function(){
-  
-  ; 
+    document.querySelector('.bg-modal').style.display='flex';
+    document.querySelector('#saveButton').style.display='none';
+    document.querySelector('#updateButton').style.display='inline-block';
+    let index=this.parentNode.parentNode.parentNode.getElementsByClassName("item-id")[0].innerHTML;
+    todoItem=JSON.parse(localStorage.getItem(index));
+    title.value=todoItem.title;
+    category.value=todoItem.category;
+    finishDate.value=todoItem.finishDate;
+    createDate.value=todoItem.createDate;
+    updateIndex=index;
 });
 }
 
 //Delete Button Functions
 let deletes = document.getElementsByClassName('button-delete');
-for(let i=0;i<checks.length;i++) {
+for(let i=0;i<deletes.length;i++) {
   deletes[i].addEventListener('click',function(){
     let index=this.parentNode.parentNode.parentNode.getElementsByClassName("item-id")[0].innerHTML;
     localStorage.removeItem(index.toString());
     this.parentNode.parentNode.parentNode.style.display="none";
 });
 }
+//Update Button Functions
+document.querySelector('#updateButton').addEventListener('click',function(){
+  let deletes = document.getElementsByClassName('button-delete');
+  Array.prototype.forEach.call(deletes, function(i) {
+  
+    if(i.parentNode.parentNode.parentNode.getElementsByClassName("item-id")[0].innerHTML===updateIndex)
+    {
+      i.parentNode.parentNode.parentNode.getElementsByClassName("titleP")[0].innerHTML=title.value+'<span hidden class="item-id" >'+updateIndex.toString()+'</span>';
+      i.parentNode.parentNode.parentNode.getElementsByClassName("left-column")[0].innerHTML="Creation Time: "+createDate.value;
+      i.parentNode.parentNode.parentNode.getElementsByClassName("middle-column")[0].innerHTML="Finish Time: "+finishDate.value;
+      i.parentNode.parentNode.parentNode.getElementsByClassName("right-column")[0].innerHTML="Category: "+category.value;
+  
+    }
+});
+
+    
+document.querySelector('.bg-modal').style.display='none';
+todoItem=JSON.parse(localStorage.getItem(parseInt(updateIndex)));
+
+const todo = {
+  title: title.value,
+  category: category.value,
+  createDate: createDate.value,
+  finishDate: finishDate.value,
+  delete:todoItem.delete,
+}
+localStorage.setItem(parseInt(updateIndex), JSON.stringify(todo));
+title.value="";
+category.value="";
+createDate.value="";
+finishDate.value="";
+});
