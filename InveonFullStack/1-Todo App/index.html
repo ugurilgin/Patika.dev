@@ -40,37 +40,27 @@
     <div id="container">
         <div class="grid-container">
 
-        <div class="grid-element">
-        <button class="accordion">Markete Gidilecek <span><i class="fa fa-angle-down" aria-hidden="true"></i></span></button>
-    <div class="panel">
-        
-<div class="row">
-    <div class="left-column">
-        <p>Markete Gidilip alışveriş yapılacak.</p>
-
-    </div>
-    <div class="right-column">
-        <div class="panelbuttons" >
-            <a  class="button-check"> <i class="fa fa-check-square-o" aria-hidden="true"></i>
-            </a>
-            <a  class="button-edit"> <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
-            </a>
-            <a  class="button-delete"> <i class="fa fa-trash-o" aria-hidden="true"></i>
-            </a>
-          </div>
-    </div>
-</div>
-<div class="row">
-    <div class="left-column-time">
-        <p>Creation Time</p>
-        </div>
-        <div class="right-column-time">
-            <p>Finish Time</p>
-        </div>
-</div>
-
-    </div>
-</div>
+            <div class="grid-element">
+                
+                <div class="accordion">
+                    <div class="alert" style="display: none;" >
+                    <a  class="bell"> <i class="fa fa-bell-o" aria-hidden="true"></i>
+                    </a>  
+                </div>
+                <p>Markete Gidilecek </p>
+                <p > <p class="left-column">Creation Time:</p><p class="middle-column">Finish Time:</p><p class="right-column">Category:</p> </p>
+               
+                    <div class="panelbuttons" >
+                        <a  class="button-check"> <i class="fa fa-check-square-o" aria-hidden="true"></i>
+                        </a>
+                        <a  class="button-edit"> <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+                        </a>
+                        <a  class="button-delete"> <i class="fa fa-trash-o" aria-hidden="true"></i>
+                        </a>
+                      </div>
+                
+                </div>
+            </div>
 
         
     </div>
@@ -84,8 +74,9 @@
                 <div class="formElement"> 
                 <input type="text" name="title" id="title" placeholder="Title">
                 </div>
-                <div class="formElement"> 
-                <input type="text" name="desc" id="desc" placeholder="Description">
+                
+            <div class="formElement"> 
+                <input type="text" name="category" id="category" placeholder="Category">
             </div>
                 <div class="formElement"> 
                 <input type="datetime" name="createDate" id="createDate" placeholder="DD/MM/YYYY">
@@ -94,7 +85,7 @@
                 <input type="datetime" name="finishDate" id="finishDate" placeholder="DD/MM/YYYY">
             </div>
                 <div class="formElement"> 
-                    <a  class="saveButton"> Save
+                    <a  class="saveButton" > Save
                     </a>
                     <a  class="cancelButton"> Cancel
                     </a>
@@ -107,6 +98,6 @@
 </body>
 <footer><a  class="addButton"> + </a>
     <script src="js/style.js"></script>
-    <script src="js/accordion.js"></script>
+    <!-- <script src="js/accordion.js"></script> -->
 </footer>
 </html>
