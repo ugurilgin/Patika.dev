@@ -1,4 +1,3 @@
-
 const title = document.querySelector("#title");
 const category = document.querySelector("#category");
 const createDate = document.querySelector("#createDate");
@@ -158,6 +157,7 @@ gridContainer.appendChild(element);
 
 });
 }
+
 //Check Button Functions
 let checks = document.getElementsByClassName('button-check');
 for(let i=0;i<checks.length;i++) {
@@ -185,6 +185,7 @@ checks[i].addEventListener('click',function(){
    
 });
 }
+
 //Edit Button Functions
 let edits = document.getElementsByClassName('button-edit');
 for(let i=0;i<edits.length;i++) {
@@ -211,6 +212,7 @@ for(let i=0;i<deletes.length;i++) {
     this.parentNode.parentNode.parentNode.style.display="none";
 });
 }
+
 //Update Button Functions
 document.querySelector('#updateButton').addEventListener('click',function(){
   let deletes = document.getElementsByClassName('button-delete');
@@ -225,8 +227,6 @@ document.querySelector('#updateButton').addEventListener('click',function(){
   
     }
 });
-
-    
 document.querySelector('.bg-modal').style.display='none';
 todoItem=JSON.parse(localStorage.getItem(parseInt(updateIndex)));
 

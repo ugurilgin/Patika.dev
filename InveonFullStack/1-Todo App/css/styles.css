@@ -1,32 +1,32 @@
 body{
-margin: 0px;
-padding: 0px;
-background: rgb(32,32,156);
-background: linear-gradient(90deg, rgba(32,32,156,1) 0%, rgba(0,212,255,1) 100%);
+  margin: 0px;
+  padding: 0px;
+  background: rgb(32,32,156);
+  background: linear-gradient(90deg, rgba(32,32,156,1) 0%, rgba(0,212,255,1) 100%);
 }
 #container{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 50%;
-    margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+  margin: auto;
 }
 .addButton{
-    width: 35px;
-    height: 35px;
-    position:fixed;
-    bottom:15px;
-    right:15px;
-    border-radius: 100%;
-    padding:10px;
-    background-color:green;
-    color:#fff;
-    text-align:center;
-    z-index:2;
-    font-size: 30px;
-    text-decoration: none;
-    cursor: pointer;
-    }
+  width: 35px;
+  height: 35px;
+  position:fixed;
+  bottom:15px;
+  right:15px;
+  border-radius: 100%;
+  padding:10px;
+  background-color:green;
+  color:#fff;
+  text-align:center;
+  z-index:2;
+  font-size: 30px;
+  text-decoration: none;
+  cursor: pointer;
+}
 h1{color: white;}
 /* <Pop Up Form > */
 .bg-modal{
@@ -38,35 +38,30 @@ h1{color: white;}
 	display: none;
 	justify-content: center;
 	align-items: center;
-
 }
 .modal-content
 {
-   width: 500px;
-   height: 300px;
-   background-color: white;
-   border-radius: 10px;
-   text-align: center;
-   padding: 20px;
-   position: relative;
-   
-
+  width: 500px;
+  height: 300px;
+  background-color: white;
+  border-radius: 10px;
+  text-align: center;
+  padding: 20px;
+  position: relative;
 }
 .modal-content form input
 {
-    width: 50%;
-    display: block;
-    margin: 19px auto;
-
+  width: 50%;
+  display: block;
+  margin: 19px auto;
 }
 .close{
-    position: absolute;
-    top: 0;
-    right: 14px;
-    font-size: 30px;
-    transform: rotate(45deg);
-    cursor: pointer;
-
+  position: absolute;
+  top: 0;
+  right: 14px;
+  font-size: 30px;
+  transform: rotate(45deg);
+  cursor: pointer;
 }
 .saveButton{
 	background-color: blue;
@@ -77,13 +72,12 @@ h1{color: white;}
 	color: white;
 	margin-top: 10px;
 	display: inline-block;
-	
 }
 .saveButton:hover {
-    background-color: white;
-		color: blue;
-		border: 2px solid blue;
-        cursor: pointer;
+  background-color: white;
+	color: blue;
+	border: 2px solid blue;
+  cursor: pointer;
   }
 .cancelButton {
 	background-color: red;
@@ -94,38 +88,32 @@ h1{color: white;}
 	color: white;
 	margin-top: 10px;
 	display: inline-block;
-	
 }
 .cancelButton:hover {
-    background-color: white;
-		color: red;
-		border: 2px solid red;
-        cursor: pointer;
-  }
+  background-color: white;
+	color: red;
+	border: 2px solid red;
+  cursor: pointer;
+}
   /* </Pop Up Form > */
-
-
   /* <Accordion Elements> */
 .grid-container {
-    width: 100%;
-    display: grid;
-    grid-template-columns: auto  ;
-    background-color: white;
-    padding: 4px;
-  }
+  width: 100%;
+  display: grid;
+  grid-template-columns: auto  ;
+  background-color: white;
+  padding: 4px;
+}
 .grid-element {
-    position: relative;
-    padding: 4px;
-    font-size: 15px;
-    text-align: center;
-   
-  }
-  .grid-element.checked {
-    text-decoration: line-through;
-    opacity: 0.2;
-
-   
-  }
+  position: relative;
+  padding: 4px;
+  font-size: 15px;
+  text-align: center; 
+}
+.grid-element.checked {
+  text-decoration: line-through;
+  opacity: 0.2;
+}
 .accordion {
   position: relative;
   background-color: #eee;
@@ -146,10 +134,8 @@ h1{color: white;}
 .active, .accordion:hover {
   background-color: #ccc; 
 }
-
-
 .button-check{
-    background-color: blue;
+  background-color: blue;
 	border: 2px solid white;
 	border-radius: 30px;
 	text-decoration: none;
@@ -157,16 +143,16 @@ h1{color: white;}
 	color: white;
 	margin-top: 10px;
 	display: inline-block;
-    margin-left: 0px;
+  margin-left: 0px;
 }
 .button-check:hover{
-    background-color: white;
-		color: blue;
-		border: 2px solid blue;
-        cursor: pointer;
+  background-color: white;
+	color: blue;
+	border: 2px solid blue;
+  cursor: pointer;
 }
 .button-edit{
-    background-color: orange;
+  background-color: orange;
 	border: 2px solid white;
 	border-radius: 30px;
 	text-decoration: none;
@@ -174,16 +160,16 @@ h1{color: white;}
 	color: white;
 	margin-top: 10px;
 	display: inline-block;
-    margin-left: 0px;
+  margin-left: 0px;
 }
 .button-edit:hover{
-    background-color: white;
-		color: orange;
-		border: 2px solid orange;
-        cursor: pointer;
+  background-color: white;
+	color: orange;
+	border: 2px solid orange;
+  cursor: pointer;
 }
 .button-delete{
-    background-color: red;
+  background-color: red;
 	border: 2px solid white;
 	border-radius: 30px;
 	text-decoration: none;
@@ -191,48 +177,42 @@ h1{color: white;}
 	color: white;
 	margin-top: 10px;
 	display: inline-block;
-    margin-left: 0px;
+  margin-left: 0px;
 }
 .button-delete:hover{
-    background-color: white;
-		color: red;
-		border: 2px solid red;
-        cursor: pointer;
+  background-color: white;
+	color: red;
+	border: 2px solid red;
+  cursor: pointer;
 }
 .left-column {
   font-size: 12px;
-    width: 30%; 
-    float:left;
-    
-  }
-  .middle-column {
-    font-size: 12px;
-    width: 30%; 
-    float:left;
-    
-  }
-  .right-column {
-    font-size: 12px;
-    width: 30%; 
-    float:right;
-   
-  }
- 
-  .panelbuttons{
-    position: absolute;
-    right: 14px;
-    top: 0;
-    float: right;
- 
-  }
-  .alert{
-    position: absolute;
-    left: 0;
-    top: 0;
-    float: left;
- 
-  }
-  .bell{
+  width: 30%; 
+  float:left; 
+}
+.middle-column {
+  font-size: 12px;
+  width: 30%; 
+  float:left;  
+}
+.right-column {
+  font-size: 12px;
+  width: 30%; 
+  float:right;
+}
+.panelbuttons{
+  position: absolute;
+  right: 14px;
+  top: 0;
+  float: right;
+}
+.alert{
+  position: absolute;
+  left: 0;
+  top: 0;
+  float: left;
+}
+.bell{
   background-color: orange;
 	border: 2px solid white;
 	border-radius: 30px;
@@ -250,7 +230,6 @@ h1{color: white;}
   animation: ring 4s .7s ease-in-out infinite;
   transform-origin: 50% 4px;
 }
-
 @-webkit-keyframes ring {
   0% { -webkit-transform: rotateZ(0); }
   1% { -webkit-transform: rotateZ(30deg); }
@@ -274,11 +253,9 @@ h1{color: white;}
   37% { -webkit-transform: rotateZ(2deg); }
   39% { -webkit-transform: rotateZ(-1deg); }
   41% { -webkit-transform: rotateZ(1deg); }
-
   43% { -webkit-transform: rotateZ(0); }
   100% { -webkit-transform: rotateZ(0); }
 }
-
 @-moz-keyframes ring {
   0% { -moz-transform: rotate(0); }
   1% { -moz-transform: rotate(30deg); }
@@ -302,11 +279,9 @@ h1{color: white;}
   37% { -moz-transform: rotate(2deg); }
   39% { -moz-transform: rotate(-1deg); }
   41% { -moz-transform: rotate(1deg); }
-
   43% { -moz-transform: rotate(0); }
   100% { -moz-transform: rotate(0); }
 }
-
 @keyframes ring {
   0% { transform: rotate(0); }
   1% { transform: rotate(30deg); }
@@ -330,15 +305,14 @@ h1{color: white;}
   37% { transform: rotate(2deg); }
   39% { transform: rotate(-1deg); }
   41% { transform: rotate(1deg); }
-
   43% { transform: rotate(0); }
   100% { transform: rotate(0); }
 }
 .bell:hover{
-    background-color: white;
-		color: orange;
-		border: 2px solid orange;
-    cursor: pointer;
+  background-color: white;
+	color: orange;
+	border: 2px solid orange;
+  cursor: pointer;
 }
 
  
