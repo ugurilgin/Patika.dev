@@ -186,8 +186,8 @@ checks[i].addEventListener('click',function(){
 let edits = document.getElementsByClassName('button-edit');
 for(let i=0;i<checks.length;i++) {
   edits[i].addEventListener('click',function(){
-  var x = this.parentNode.parentNode;
-  console.log(x); 
+  
+  ; 
 });
 }
 
@@ -195,7 +195,8 @@ for(let i=0;i<checks.length;i++) {
 let deletes = document.getElementsByClassName('button-delete');
 for(let i=0;i<checks.length;i++) {
   deletes[i].addEventListener('click',function(){
-  var x = this.parentNode.parentNode;
-  console.log(x); 
+    let index=this.parentNode.parentNode.parentNode.getElementsByClassName("item-id")[0].innerHTML;
+    localStorage.removeItem(index.toString());
+    this.parentNode.parentNode.parentNode.style.display="none";
 });
 }
