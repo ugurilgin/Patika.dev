@@ -1,10 +1,4 @@
-const title = document.querySelector("#title");
-const category = document.querySelector("#category");
-const createDate = document.querySelector("#createDate");
-const finishDate = document.querySelector("#finishDate");
-const gridContainer = document.querySelector(".grid-container");
 let updateIndex;
-
 //Add Button Functions
 document.querySelector('.addButton').addEventListener('click',function(){
   
@@ -23,146 +17,60 @@ document.querySelector('.addButton').addEventListener('click',function(){
 //Close Button Functions
 document.querySelector('.close').addEventListener('click',function(){
     document.querySelector('.bg-modal').style.display='none';
+    clearItems();
 });
 
 //Cancel Button Functions
 document.querySelector('.cancelButton').addEventListener('click',function(){
     document.querySelector('.bg-modal').style.display='none';
-    
-    title.value="";
-    category.value="";
-    createDate.value="";
-    finishDate.value="";
+    clearItems();
 });
 
-
-
-// Get Date Functions
-function getToday()
-{
-    var date = new Date();
-
-    var day = date.getDate();
-    var month = date.getMonth() + 1;
-    var year = date.getFullYear();
-    
-    if (month < 10) month = "0" + month;
-    if (day < 10) day = "0" + day;
-    
-    var today = day + "/" + month + "/" + year ;       
-    document.getElementById("createDate").value = today;
-    return today;
-}
 
 //Save Button Functions
 document.querySelector('#saveButton').addEventListener('click',function(){
- 
-  let keyNumber=Math.floor(Math.random() * 1000000000000001);
+  if (title.value === '' || finishDate.value === '' ) {
+    alert("Title and Finish Date Cant Be Null !");
+  } else {
+   let keyNumber=Math.floor(Math.random() * 1000000000000001);
+   date1=getToday().split('/');
+   date2=finishDate.value.split('/');
+   date1 = new Date(date1[2],date1[1],date1[0]);
+   date2 = new Date(date2[2],date2[1],date2[0]); 
     const element = document.createElement('div');
+    const checkButton = document.createElement('a');
+    const editButton = document.createElement('a');
+    const deleteButton = document.createElement('a');
+    const pTitle = document.createElement('p');
+    const pDetail = document.createElement('p');
+    const panelButtonsDiv = document.createElement('div');
+    const accordionDiv = document.createElement('div');
+    const alertDiv = document.createElement('div');
+    panelButtonsDiv.className = 'panelbuttons';
+    accordionDiv.className = 'accordion';
     element.className = 'grid-element';
-    element.innerHTML='<div class="accordion">'+
-    '<div class="alert" style="display: none;" >'+
-    '<a  class="bell"> <i class="fa fa-bell-o" aria-hidden="true"></i>'+
-    '</a> '+ 
-'</div>'+
-'<p class="titleP">'+title.value+'<span hidden class="item-id" >'+keyNumber.toString()+'</span>'+'</p>' +
-'<p > <p class="left-column">Creation Time: '+createDate.value+'</p><p class="middle-column">Finish Time: '+finishDate.value+'</p><p class="right-column">Category: '+category.value+'</p> </p>'+
-
-    '<div class="panelbuttons" >'+
-        '<a  class="button-check"> <i class="fa fa-check-square-o" aria-hidden="true"></i>'+
-        '</a>'+
-        '<a  class="button-edit"> <i class="fa fa-pencil-square-o" aria-hidden="true"></i>'+
-        '</a>'+
-        '<a  class="button-delete"> <i class="fa fa-trash-o" aria-hidden="true"></i>'+
-        '</a>'+
-      '</div>'+
-
-'</div>';
-gridContainer.appendChild(element);
-document.querySelector('.bg-modal').style.display='none';
-const todo = {
-  title: title.value,
-  category: category.value,
-  createDate: createDate.value,
-  finishDate: finishDate.value,
-  delete:false,
-}
-localStorage.setItem(keyNumber, JSON.stringify(todo));
-title.value="";
-category.value="";
-createDate.value="";
-finishDate.value="";
-});
-
-//Get Items  Functions
-getItems();
-function getItems()
-{
-  if (localStorage.length===0)
+    alertDiv.className = 'alert';
+    if(date1 >= date2 )
   {
-    const element = document.createElement('div');
-    element.className = 'grid-element';
-   
-   
-  element.innerHTML='<p class="remove-this">There is no record to show </p>';
-  gridContainer.appendChild(element);
-  }
-
-  Object.keys(localStorage).forEach(function(i){
-  
-   
-  a=JSON.parse(localStorage.getItem(i));
-  
-  const element = document.createElement('div');
- 
-  date1=getToday().split('/');
-
-  date2=a.finishDate.split('/');
-  date1 = new Date(date1[2],date1[1],date1[0]);
-  date2 = new Date(date2[2],date2[1],date2[0]);
-  let alertstr="";
-  if(date1 >= date2 )
-  {
-    alertstr='<div class="alert" style="display: block;" >';
+    alertDiv.style = 'display: block';
   }
   else
   {
-    alertstr='<div class="alert" style="display: none;" >';
+    alertDiv.style = 'display: none';
   }
-  element.className = 'grid-element';
-
-  element.innerHTML='<div class="accordion">'+
-  alertstr+
-  '<a  class="bell"> <i class="fa fa-bell-o" aria-hidden="true"></i>'+
-  '</a> '+ 
-'</div>'+
-'<p class="titleP">'+a.title+'<span hidden class="item-id" >'+i.toString()+'</span>'+'</p>' +
-'<p > <p class="left-column">Creation Time: '+a.createDate+'</p><p class="middle-column">Finish Time: '+a.finishDate+'</p><p class="right-column">Category: '+a.category+'</p> </p>'+
-
-  '<div class="panelbuttons" >'+
-      '<a  class="button-check"> <i class="fa fa-check-square-o" aria-hidden="true"></i>'+
-      '</a>'+
-      '<a  class="button-edit"> <i class="fa fa-pencil-square-o" aria-hidden="true"></i>'+
-      '</a>'+
-      '<a  class="button-delete"> <i class="fa fa-trash-o" aria-hidden="true"></i>'+
-      '</a>'+
-    '</div>'+
-
-'</div>';
-if (a.delete===true)
-   {
-  element.classList.toggle("checked");
-   }
-gridContainer.appendChild(element);
-
-});
-}
-
-//Check Button Functions
-let checks = document.getElementsByClassName('button-check');
-for(let i=0;i<checks.length;i++) {
-checks[i].addEventListener('click',function(){
-  let index=this.parentNode.parentNode.parentNode.getElementsByClassName("item-id")[0].innerHTML;
+    checkButton.className = 'button-check';
+    editButton.className = 'button-edit';
+    deleteButton.className = 'button-delete';
+    pTitle.className = 'titleP';
+    alertDiv.innerHTML='<a  class="bell"> <i class="fa fa-bell-o" aria-hidden="true"></i></a>';
+    pTitle.innerHTML=title.value+'<span hidden class="item-id" >'+keyNumber.toString()+'</span>';
+    pDetail.innerHTML='<p class="left-column">Creation Time: '+createDate.value+'</p><p class="middle-column">Finish Time: '+finishDate.value+'</p><p class="right-column">Category: '+category.value+'</p>';
+    
+    checkButton.innerHTML=' <i class="fa fa-check-square-o" aria-hidden="true"></i>';
+    editButton.innerHTML='<i class="fa fa-pencil-square-o" aria-hidden="true">';
+    deleteButton.innerHTML='<i class="fa fa-trash-o" aria-hidden="true">';
+checkButton.addEventListener('click',function(){
+let index=keyNumber.toString();
   todoItem=JSON.parse(localStorage.getItem(index));
   let ischecked=todoItem.delete;
   if(ischecked===false)
@@ -180,41 +88,75 @@ checks[i].addEventListener('click',function(){
     finishDate: todoItem.finishDate,
     delete:ischecked,
   }
+  let element= this.parentNode.parentNode.parentNode;
   localStorage.setItem(index,JSON.stringify(todo));
-   this.parentNode.parentNode.parentNode.classList.toggle('checked');
+  setTimeout(function() {
+    element.classList.toggle("checked");
+    
+  }, 0.1);
+ 
+});
+
+editButton.addEventListener('click',function(){
+  let index=keyNumber.toString();
+  document.querySelector('.bg-modal').style.display='flex';
+  document.querySelector('#saveButton').style.display='none';
+  document.querySelector('#updateButton').style.display='inline-block';
+  todoItem=JSON.parse(localStorage.getItem(index));
+  title.value=todoItem.title;
+  category.value=todoItem.category;
+  finishDate.value=todoItem.finishDate;
+  createDate.value=todoItem.createDate;
+  updateIndex=index;
    
-});
-}
+  });
+  deleteButton.addEventListener('click',function(){
+    let index=keyNumber.toString();
+    localStorage.removeItem(index);
+    this.parentNode.parentNode.parentNode.classList.remove("show");
+    let element= this.parentNode.parentNode.parentNode;
+    setTimeout(function() {
+      element.classList.toggle("hide");
+      setTimeout(function() {
+        element.style.display="none";
+      }, 0.0001);
+    }, 600);
+    });
+panelButtonsDiv.appendChild(checkButton);
+panelButtonsDiv.appendChild(editButton);
+panelButtonsDiv.appendChild(deleteButton);
+accordionDiv.appendChild(alertDiv);
+accordionDiv.appendChild(pTitle);
+accordionDiv.appendChild(pDetail);
+accordionDiv.appendChild(panelButtonsDiv);
+element.appendChild(accordionDiv);
 
-//Edit Button Functions
-let edits = document.getElementsByClassName('button-edit');
-for(let i=0;i<edits.length;i++) {
-  edits[i].addEventListener('click',function(){
-    document.querySelector('.bg-modal').style.display='flex';
-    document.querySelector('#saveButton').style.display='none';
-    document.querySelector('#updateButton').style.display='inline-block';
-    let index=this.parentNode.parentNode.parentNode.getElementsByClassName("item-id")[0].innerHTML;
-    todoItem=JSON.parse(localStorage.getItem(index));
-    title.value=todoItem.title;
-    category.value=todoItem.category;
-    finishDate.value=todoItem.finishDate;
-    createDate.value=todoItem.createDate;
-    updateIndex=index;
-});
-}
+document.querySelector('.bg-modal').style.display='none';
 
-//Delete Button Functions
-let deletes = document.getElementsByClassName('button-delete');
-for(let i=0;i<deletes.length;i++) {
-  deletes[i].addEventListener('click',function(){
-    let index=this.parentNode.parentNode.parentNode.getElementsByClassName("item-id")[0].innerHTML;
-    localStorage.removeItem(index.toString());
-    this.parentNode.parentNode.parentNode.style.display="none";
-});
+gridContainer.appendChild(element);
+setTimeout(function() {
+  element.className = element.className + " show";
+}, 10);
+
+
+const todo = {
+  title: title.value,
+  category: category.value,
+  createDate: createDate.value,
+  finishDate: finishDate.value,
+  delete:false,
 }
+localStorage.setItem(keyNumber, JSON.stringify(todo));
+clearItems();
+}
+});
+
 
 //Update Button Functions
 document.querySelector('#updateButton').addEventListener('click',function(){
+  if (title.value === '' || finishDate.value === '' ) {
+    alert("Title and Finish Date Cant Be Null !");
+  } else {
   let deletes = document.getElementsByClassName('button-delete');
   Array.prototype.forEach.call(deletes, function(i) {
   
@@ -238,8 +180,7 @@ const todo = {
   delete:todoItem.delete,
 }
 localStorage.setItem(parseInt(updateIndex), JSON.stringify(todo));
-title.value="";
-category.value="";
-createDate.value="";
-finishDate.value="";
+clearItems();
+  }
 });
+
