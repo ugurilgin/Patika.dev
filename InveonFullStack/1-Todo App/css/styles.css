@@ -13,6 +13,11 @@ body{
   width: 50%;
   margin: auto;
 }
+.itemsCount{
+ 
+  float: left;
+  color: white;
+}
 .addButton{
   width: 35px;
   height: 35px;
@@ -99,6 +104,27 @@ h1{
   background-color: white;
 	color: red;
 	border: 2px solid red;
+  cursor: pointer;
+}
+.deleteAll {
+  
+	background-color: rgb(148, 93, 145);
+	border: 2px solid white;
+	border-radius: 30px;
+	text-decoration: none;
+  height: 16px;
+	padding: 8px 8px;
+	color: white;
+	display: inline-block;
+  margin-bottom: 0px;
+  margin-top:10px ;
+  margin-left: auto;
+  margin-bottom:20px ;
+}
+.deleteAll:hover {
+  background-color: white;
+	color: rgb(148, 93, 145);
+	border: 2px solid rgb(148, 93, 145);
   cursor: pointer;
 }
   /* </Pop Up Form > */

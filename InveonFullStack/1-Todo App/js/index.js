@@ -3,7 +3,7 @@ let category = document.querySelector("#category");
 let createDate = document.querySelector("#createDate");
 let finishDate = document.querySelector("#finishDate");
 let gridContainer = document.querySelector(".grid-container");
-
+let itemsCount = document.querySelector(".itemsCount");
 var something = (function() {
   var executed = false;
   return function() {
@@ -74,6 +74,8 @@ something();
   checkButton.innerHTML=' <i class="fa fa-check-square-o" aria-hidden="true"></i>';
   editButton.innerHTML='<i class="fa fa-pencil-square-o" aria-hidden="true">';
   deleteButton.innerHTML='<i class="fa fa-trash-o" aria-hidden="true">';
+
+//check Item Buttons
 checkButton.addEventListener('click',function(){
 let index=i.toString();
 todoItem=JSON.parse(localStorage.getItem(index));
@@ -101,7 +103,7 @@ setTimeout(function() {
 }, 0.1);
 
 });
-
+ //edit Item Buttons
 editButton.addEventListener('click',function(){
 let index=i.toString();
 document.querySelector('.bg-modal').style.display='flex';
@@ -115,6 +117,7 @@ createDate.value=todoItem.createDate;
 updateIndex=index;
  
 });
+ //delete Item Buttons
 deleteButton.addEventListener('click',function(){
   let index=i.toString();
   localStorage.removeItem(index);
@@ -126,6 +129,7 @@ deleteButton.addEventListener('click',function(){
       element.style.display="none";
     }, 0.0001);
   }, 600);
+  itemsCount.innerHTML="Item(s) Count: "+localStorage.length;
   });
 panelButtonsDiv.appendChild(checkButton);
 panelButtonsDiv.appendChild(editButton);
@@ -145,6 +149,7 @@ setTimeout(function() {
   element.className = element.className + " show";
 }, 10);
 });
+itemsCount.innerHTML="Item(s) Count: "+localStorage.length;
 }
 
 

@@ -1,4 +1,26 @@
 let updateIndex;
+// Delete All Items Functions
+document.querySelector('.deleteAll').addEventListener('click',function(){
+  Object.keys(localStorage).forEach(function(i){
+  localStorage.removeItem(i);
+  });
+  const gridElem = document.getElementsByClassName("grid-element");
+  for(let i = 0; i<gridElem.length;i++)
+  {
+    gridElem[i].style.display='none';
+  }
+  
+
+  const element = document.createElement('div');
+    element.className = 'grid-element';
+  element.innerHTML='<p class="remove-this">There is no record to show </p>';
+  gridContainer.appendChild(element);
+  setTimeout(function() {
+    element.className = element.className + " show";
+  }, 10);
+  itemsCount.innerHTML="Item(s) Count: "+localStorage.length;
+});
+
 //Add Button Functions
 document.querySelector('.addButton').addEventListener('click',function(){
   
@@ -69,8 +91,9 @@ document.querySelector('#saveButton').addEventListener('click',function(){
     checkButton.innerHTML=' <i class="fa fa-check-square-o" aria-hidden="true"></i>';
     editButton.innerHTML='<i class="fa fa-pencil-square-o" aria-hidden="true">';
     deleteButton.innerHTML='<i class="fa fa-trash-o" aria-hidden="true">';
-checkButton.addEventListener('click',function(){
-let index=keyNumber.toString();
+ //check Item Buttons
+  checkButton.addEventListener('click',function(){
+  let index=keyNumber.toString();
   todoItem=JSON.parse(localStorage.getItem(index));
   let ischecked=todoItem.delete;
   if(ischecked===false)
@@ -96,7 +119,7 @@ let index=keyNumber.toString();
   }, 0.1);
  
 });
-
+ //edit Item Buttons
 editButton.addEventListener('click',function(){
   let index=keyNumber.toString();
   document.querySelector('.bg-modal').style.display='flex';
@@ -110,6 +133,7 @@ editButton.addEventListener('click',function(){
   updateIndex=index;
    
   });
+  //delete Item Buttons
   deleteButton.addEventListener('click',function(){
     let index=keyNumber.toString();
     localStorage.removeItem(index);
@@ -121,6 +145,7 @@ editButton.addEventListener('click',function(){
         element.style.display="none";
       }, 0.0001);
     }, 600);
+    itemsCount.innerHTML="Item(s) Count: "+localStorage.length;
     });
 panelButtonsDiv.appendChild(checkButton);
 panelButtonsDiv.appendChild(editButton);
@@ -148,6 +173,7 @@ const todo = {
 }
 localStorage.setItem(keyNumber, JSON.stringify(todo));
 clearItems();
+itemsCount.innerHTML="Item(s) Count: "+localStorage.length;
 }
 });
 
