@@ -223,7 +223,7 @@ h1{
   position: absolute;
   right: 14px;
   top: 0;
-  float: right;
+  float: left;
 }
 .alert{
   position: absolute;
@@ -331,3 +331,180 @@ h1{
 
  
    /* </Accordion Elements> */
+   @media only screen and (max-width: 1250px) {
+    .left-column {
+      font-size: 11px;
+      width: 20%; 
+      float:left; 
+      margin-left: 0px;
+    }
+    .middle-column {
+      font-size: 11px;
+      width: 20%; 
+      float:left;  
+      margin-left: 0px;
+    }
+    .right-column {
+      font-size: 11px;
+      width: 20%; 
+      float:left;
+      margin-left: 0px;
+    }
+    .titleP{
+      font-size: 13px;
+    }
+    .button-delete{
+      background-color: red;
+      border: 2px solid white;
+      border-radius: 30px;
+      text-decoration: none;
+      padding: 3px 4px;
+      color: white;
+      margin-top: 10px;
+      display: inline-block;
+      margin-left: 0px;
+    }
+    .button-delete:hover{
+      background-color: white;
+      color: red;
+      border: 2px solid red;
+      cursor: pointer;
+    }
+    .button-check{
+      background-color: blue;
+      border: 2px solid white;
+      border-radius: 30px;
+      text-decoration: none;
+      padding: 3px 4px;
+      color: white;
+      margin-top: 10px;
+      display: inline-block;
+      margin-left: 0px;
+    }
+    .button-check:hover{
+      background-color: white;
+      color: blue;
+      border: 2px solid blue;
+      cursor: pointer;
+    }
+    .button-edit{
+      background-color: orange;
+      border: 2px solid white;
+      border-radius: 30px;
+      text-decoration: none;
+      padding: 3px 4px;
+      color: white;
+      margin-top: 10px;
+      display: inline-block;
+      margin-left: 0px;
+    }
+    .button-edit:hover{
+      background-color: white;
+      color: orange;
+      border: 2px solid orange;
+      cursor: pointer;
+    }
+    .addButton{
+      width: 25px;
+      height: 25px;
+      position:fixed;
+      bottom:15px;
+      right:15px;
+      border-radius: 100%;
+      padding:10px;
+      background-color:green;
+      color:#fff;
+      text-align:center;
+      z-index:2;
+      font-size: 20px;
+      text-decoration: none;
+      cursor: pointer;
+    }
+  }
+  @media only screen and (max-width: 900px) {
+    .left-column {
+      font-size: 9px;
+      width: 20%; 
+      float:left; 
+    }
+    .middle-column {
+      font-size: 9px;
+      width: 20%; 
+      float:left;  
+    }
+    .right-column {
+      font-size: 9px;
+      width: 20%; 
+      float:left;
+    }
+    .titleP{
+      font-size: 11px;
+    }
+    .button-delete{
+      background-color: red;
+      border: 2px solid white;
+      border-radius: 30px;
+      text-decoration: none;
+      padding: 2px 3px;
+      color: white;
+      margin-top: 10px;
+      display: inline-block;
+      margin-left: 0px;
+    }
+    .button-delete:hover{
+      background-color: white;
+      color: red;
+      border: 2px solid red;
+      cursor: pointer;
+    }
+    .button-check{
+      background-color: blue;
+      border: 2px solid white;
+      border-radius: 30px;
+      text-decoration: none;
+      padding: 2px 3px;
+      color: white;
+      margin-top: 10px;
+      display: inline-block;
+      margin-left: 0px;
+    }
+    .button-check:hover{
+      background-color: white;
+      color: blue;
+      border: 2px solid blue;
+      cursor: pointer;
+    }
+    .button-edit{
+      background-color: orange;
+      border: 2px solid white;
+      border-radius: 30px;
+      text-decoration: none;
+      padding: 2px 3px;
+      color: white;
+      margin-top: 10px;
+      display: inline-block;
+      margin-left: 0px;
+    }
+    .button-edit:hover{
+      background-color: white;
+      color: orange;
+      border: 2px solid orange;
+      cursor: pointer;
+    }
+    .addButton{
+      width: 15px;
+      height: 15px;
+      position:fixed;
+      bottom:15px;
+      right:15px;
+      border-radius: 100%;
+      padding:10px;
+      background-color:green;
+      color:#fff;
+      text-align:center;
+      z-index:2;
+      font-size: 12px;
+      text-decoration: none;
+      cursor: pointer;
+    }
+  }
