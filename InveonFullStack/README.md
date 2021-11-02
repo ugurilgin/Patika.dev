@@ -14,5 +14,5 @@
 Uğur ILGIN
 
 ##### Github Linki:
-https://github.com/ugurilgin/Patika.dev/tree/main/InveonFullStack/
-https://github.com/135-Inveon-FullStack-Bootcamp-Classroom/Ugur-Ilgin-Homeworks
+- https://github.com/ugurilgin/Patika.dev/tree/main/InveonFullStack/
+- https://github.com/135-Inveon-FullStack-Bootcamp-Classroom/Ugur-Ilgin-Homeworks
