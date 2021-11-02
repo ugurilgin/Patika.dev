@@ -17,11 +17,11 @@ HTML,CSS ve JavaScript  kullanılarak hazırlanan bir todo app uygulamasıdır
 
 ## Ekran Görünütleri
 * Anasayfa
-* ![logo](/img/TodoApp/1.jpg)
+* ![logo](/img/TodoApp/1.png)
 * Yeni Görev Ekleme 
-* ![logo](/img/TodoApp/2.jpg)
+* ![logo](/img/TodoApp/2.png)
 * Görevi Güncelleme
-* ![logo](/img/TodoApp/3.jpg)
+* ![logo](/img/TodoApp/3.png)
 ### Github Linki:
 https://github.com/ugurilgin/Patika.dev/tree/main/InveonFullStack/1-Todo%20App
 ## Hazırlayanlar
