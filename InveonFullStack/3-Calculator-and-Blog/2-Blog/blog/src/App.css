@@ -1,0 +1,55 @@
+.body {
+  margin:0;
+  padding: 0;
+}
+.navbar {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+.navbar-item {
+  float: left;
+}
+
+.navbar-item a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.navbar-item a:hover:not(.active) {
+  background-color: #111;
+}
+
+.active {
+  background-color: #04AA6D;
+}
+.blog-area{
+  display: grid;
+  grid-template-columns: auto auto auto auto auto;
+}
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  margin-left: 10px;
+  width: 90%;
+  margin-bottom: 40px;
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.container {
+  padding: 2px 16px;
+}
+.alice-carousel ul li img{
+  height: 400px;
+  width: 100%;
+  object-fit: cover;
+}
