@@ -1,5 +1,5 @@
 # Inveon Full Stack Bootcamp - Homework 1 - Todo App 
-![logo](/SS/1.png)
+![logo](/img/TodoApp/1.png)
 
 HTML,CSS ve JavaScript  kullanılarak hazırlanan bir todo app uygulamasıdır 
 * Kullanıcı yapılması gereken görevlerini ekleyebilir,Güncelleyebilir ve Silebilir
@@ -17,11 +17,11 @@ HTML,CSS ve JavaScript  kullanılarak hazırlanan bir todo app uygulamasıdır
 
 ## Ekran Görünütleri
 * Anasayfa
-* ![logo](/SS/1.jpg)
+* ![logo](/img/TodoApp/1.jpg)
 * Yeni Görev Ekleme 
-* ![logo](/SS/2.jpg)
+* ![logo](/img/TodoApp/2.jpg)
 * Görevi Güncelleme
-* ![logo](/SS/3.jpg)
+* ![logo](/img/TodoApp/3.jpg)
 ### Github Linki:
 https://github.com/ugurilgin/Patika.dev/tree/main/InveonFullStack/1-Todo%20App
 ## Hazırlayanlar
