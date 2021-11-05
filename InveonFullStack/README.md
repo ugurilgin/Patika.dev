@@ -7,7 +7,7 @@
 * Week 2
 -  [Ödev-2 (Todo App with React) ](https://github.com/ugurilgin/Patika.dev/tree/main/InveonFullStack/2-Todo%20App%20(ReactJs)/todo-app/README.md) --- [Netlify Live Server](https://naughty-lalande-d57850.netlify.app)
 * Week 3
--  [Ödev-3 (Calculator with React) ](https://github.com/ugurilgin/Patika.dev/tree/main/InveonFullStack/3-Calculator-and-Blog/1-Calculator/calculator/README.md) --- [Netlify Live Server](https://optimistic-galileo-659f8b.netlify.app)
+-  [Ödev-3 (Calculator with React) ](https://github.com/ugurilgin/Patika.dev/tree/main/InveonFullStack/3-Calculator-and-Blog/1-Calculator/calculator/README.md) --- [Netlify Live Server](https://peaceful-ride-7c4675.netlify.app)
 -  [Ödev-4 (Simple Blog with React) ](https://github.com/ugurilgin/Patika.dev/tree/main/InveonFullStack/3-Calculator-and-Blog/2-Blog/blog/README.md) --- [Netlify Live Server](https://pensive-beaver-ae30e4.netlify.app)
 
 ## Hazırlayanlar

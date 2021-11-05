@@ -6,4 +6,4 @@ npm install
 npm start
 
 ##### Live Server
-https://optimistic-galileo-659f8b.netlify.app
+https://peaceful-ride-7c4675.netlify.app
