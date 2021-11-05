@@ -76,7 +76,7 @@ setCalc((calc) => {
         setIsEqual(false);
         return calc + "/";
       });
-        
+    
     }
     else if(key ==="−")
     {
@@ -106,10 +106,19 @@ setCalc((calc) => {
     {
      
         
-      setCalc((calc) => {
-        setIsEqual(true);
-        setOperator(calc+" =");
-        return (eval(calc).toString());
+        setCalc((calc) => {
+          try
+          {
+            setIsEqual(true);
+            setOperator(calc+" =");
+            return (eval(calc).toString());
+          }
+          catch
+       {
+        setIsEqual(false);
+        setOperator(calc);
+        return calc;
+       }
       });
         
     }
