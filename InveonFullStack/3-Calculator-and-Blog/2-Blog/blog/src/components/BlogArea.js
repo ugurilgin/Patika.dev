@@ -20,14 +20,10 @@ function BlogArea() {
         <>
              <h1>Blog</h1>
         <div className="blog-area">
-          
-           
-           
             {posts.map((post) => (
                  <Card img={NoImage} name={post.title} about={post.body} />
                  ))}
-      
-            
+
         </div>
         </>
     )

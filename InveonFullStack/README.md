@@ -9,7 +9,9 @@
 * Week 3
 -  [Ödev-3 (Calculator with React) ](https://github.com/ugurilgin/Patika.dev/tree/main/InveonFullStack/3-Calculator-and-Blog/1-Calculator/calculator/README.md) --- [Netlify Live Server](https://peaceful-ride-7c4675.netlify.app)
 -  [Ödev-4 (Simple Blog with React) ](https://github.com/ugurilgin/Patika.dev/tree/main/InveonFullStack/3-Calculator-and-Blog/2-Blog/blog/README.md) --- [Netlify Live Server](https://pensive-beaver-ae30e4.netlify.app)
-
+* Week 4
+-  [Ödev-5 (Redux Caps Generator) ](https://github.com/ugurilgin/Patika.dev/tree/main/InveonFullStack/4-CapsGenerator/README.md) --- [Netlify Live Server](https://peaceful-ride-7c4675.netlify.app)
+-  [Ödev-6 (Redux Counter) ](https://github.com/ugurilgin/Patika.dev/tree/main/InveonFullStack/4-Redux-Counter/redux-counter/README.md) --- [Netlify Live Server](https://pensive-beaver-ae30e4.netlify.app)
 ## Hazırlayanlar
 Uğur ILGIN
 

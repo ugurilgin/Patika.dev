@@ -1,0 +1,61 @@
+
+body{
+    margin: 0px;
+  padding: 0px;
+    background-color: #e4e4e3;
+}
+
+.headerColor{
+    background-color: #0526ad;
+    color: whitesmoke;
+}
+
+
+
+ span{
+  
+    margin-right: 10px;
+    font-size: 60px;
+    font-weight: 700;
+   
+}  
+
+ .numberBorder{
+     
+    align-items: center;
+    justify-content: center;
+     width: 150px;
+     height: 120px;
+    
+   
+  
+}
+
+
+.card-body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    margin: auto;
+  }
+
+.buttons{
+   
+    margin-top: 50px;
+  
+  
+}
+.buttons button{
+   
+    background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  margin-left: 3px;
+  text-decoration: none;
+ 
+  font-size: 16px;
+  
+  
+}
