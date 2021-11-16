@@ -1,0 +1,13 @@
+C:\Users\futbo\source\repos\OopTemplate\OopTemplate\bin\Debug\netcoreapp3.1\OopTemplate.exe
+C:\Users\futbo\source\repos\OopTemplate\OopTemplate\bin\Debug\netcoreapp3.1\OopTemplate.deps.json
+C:\Users\futbo\source\repos\OopTemplate\OopTemplate\bin\Debug\netcoreapp3.1\OopTemplate.runtimeconfig.json
+C:\Users\futbo\source\repos\OopTemplate\OopTemplate\bin\Debug\netcoreapp3.1\OopTemplate.runtimeconfig.dev.json
+C:\Users\futbo\source\repos\OopTemplate\OopTemplate\bin\Debug\netcoreapp3.1\OopTemplate.dll
+C:\Users\futbo\source\repos\OopTemplate\OopTemplate\bin\Debug\netcoreapp3.1\OopTemplate.pdb
+C:\Users\futbo\source\repos\OopTemplate\OopTemplate\obj\Debug\netcoreapp3.1\OopTemplate.csprojAssemblyReference.cache
+C:\Users\futbo\source\repos\OopTemplate\OopTemplate\obj\Debug\netcoreapp3.1\OopTemplate.csproj.CoreCompileInputs.cache
+C:\Users\futbo\source\repos\OopTemplate\OopTemplate\obj\Debug\netcoreapp3.1\OopTemplate.AssemblyInfoInputs.cache
+C:\Users\futbo\source\repos\OopTemplate\OopTemplate\obj\Debug\netcoreapp3.1\OopTemplate.AssemblyInfo.cs
+C:\Users\futbo\source\repos\OopTemplate\OopTemplate\obj\Debug\netcoreapp3.1\OopTemplate.dll
+C:\Users\futbo\source\repos\OopTemplate\OopTemplate\obj\Debug\netcoreapp3.1\OopTemplate.pdb
+C:\Users\futbo\source\repos\OopTemplate\OopTemplate\obj\Debug\netcoreapp3.1\OopTemplate.genruntimeconfig.cache
