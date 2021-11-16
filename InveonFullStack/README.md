@@ -14,7 +14,7 @@
 -  [Ödev-6 (Redux Counter) ](https://github.com/ugurilgin/Patika.dev/tree/main/InveonFullStack/4-Redux-Counter/redux-counter/README.md) --- [Netlify Live Server](https://pensive-beaver-ae30e4.netlify.app)
 -  ##### Backend Homeworks
 * Week 5
-- [Ödev-7 (OOP Template) ](https://github.com/ugurilgin/Patika.dev/tree/main/InveonFullStack/5-OOP%20Temolate/README.md) 
+- [Ödev-7 (OOP Template) ](https://github.com/ugurilgin/Patika.dev/tree/main/InveonFullStack/5-Oop%20Template) 
 ## Hazırlayanlar
 Uğur ILGIN
 
